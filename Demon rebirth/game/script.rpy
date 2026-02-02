@@ -5,7 +5,20 @@
 
 define a = Character("Avery")
 
+label splashscreen:
+    
+    scene black 
+    show logo at truecenter 
+    with Pause(0.1)
+  
+    play sound "intro_jingle.wav"
 
+
+    with Pause(5)
+
+    scene black with dissolve
+    with Pause(1)
+    return
 
 
 # The game starts here.
@@ -29,7 +42,7 @@ label start:
     play audio gig1
     a "hehehehe"
 
-    jump drowning1
+    jump intro
     # This ends the game.
 
     return
