@@ -38,11 +38,13 @@ label start:
     # These display lines of dialogue.
     show kana at Transform(zoom=0.3)
     a "im gonan go swim"
-    show kana_wintersei_open at Transform(zoom=0.3)
+    show k_s_o_m at Transform(zoom=0.3)
     play audio gig1
     a "hehehehe"
+    
 
     jump intro
     # This ends the game.
 
     return
+# k means kana. f or s means frown/smile. o/c means closed/open. so k_f_c = kana frown closed
