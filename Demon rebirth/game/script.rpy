@@ -6,7 +6,8 @@
 define a = Character("Avery")
 
 label splashscreen:
-    
+    $ _skipping = False
+    $ _dismiss_pause = False
     scene black 
     # show logo at truecenter 
     show ren at truecenter
@@ -19,7 +20,28 @@ label splashscreen:
     with Pause(5)
 
     scene black with dissolve
+    with Pause(2)
+    jump credit
+
+label credit:
+    
+    scene black 
+    # show logo at truecenter 
+    show credit at truecenter,Transform(zoom=2)
+    show assets at top
+    show credit1 at center, default
+    
+    with Pause(0.1)
+  
+    play sound "credit_theme.wav"
+
+
+    with Pause(5)
+
+    scene black with dissolve
     with Pause(1)
+    $ _skipping = True
+    $ _dismiss_pause = True
     return
 
 
