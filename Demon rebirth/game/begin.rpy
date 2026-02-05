@@ -1,8 +1,8 @@
 label begin:
     stop music
     play audio nature loop
-    scene lakeside_daytime
-    show k s_c at left_char
+    scene lakeside_daytime with fade
+    show k s_c at left_char with dissolve
     a "come on big bro"
     show k s_c_b at left_char
     a "weeeeeeeeeee"

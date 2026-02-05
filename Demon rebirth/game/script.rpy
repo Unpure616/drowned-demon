@@ -67,7 +67,7 @@ label start:
     a "hehehehe"
     
 
-    jump intro
+    jump intro 
     # This ends the game.
 
     return

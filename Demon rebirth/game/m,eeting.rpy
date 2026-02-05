@@ -1,5 +1,5 @@
 label intro:
-    scene black 
+    scene black with fadein
     play music music loop
     with Pause(4)
 
