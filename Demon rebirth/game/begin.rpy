@@ -19,4 +19,6 @@ label begin:
     show k_f_o at Transform(zoom=0.3)
     "ugh"
     "you know what i mean"
+    show k_f_c_m at Transform(zoom=0.3)
+    a "you're over reacting"
     jump drowning1
