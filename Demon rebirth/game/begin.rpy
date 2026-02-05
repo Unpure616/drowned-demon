@@ -2,23 +2,23 @@ label begin:
     stop music
     play audio nature loop
     scene lakeside_daytime
-    show k_s_c at Transform(zoom=0.3)
+    show k s_c at left_char
     a "come on big bro"
-    show k_s_c_b at Transform(zoom=0.3)
+    show k s_c_b at left_char
     a "weeeeeeeeeee"
-    show k_s_o at Transform(zoom=0.3)
+    show k s_o at left_char
     "slow down"
-    show k_f_c at Transform(zoom=0.3)
+    show k f_c at left_char
     "you're gonna trip and fall!"
     stop audio
     stop music
     stop sound
-    show k_f_o_m at Transform(zoom=0.3)
+    show k f_o_m at left_char
     a "relax big bro" 
     a " its not like im gonna fall into that lake"
-    show k_f_o at Transform(zoom=0.3)
+    show k f_o at left_char
     "ugh"
     "you know what i mean"
-    show k_f_c_m at Transform(zoom=0.3)
+    show k f_c_m at left_char
     a "you're over reacting"
     jump drowning1

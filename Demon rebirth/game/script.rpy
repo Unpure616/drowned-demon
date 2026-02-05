@@ -8,7 +8,9 @@ define a = Character("Avery")
 label splashscreen:
     
     scene black 
-    show logo at truecenter 
+    # show logo at truecenter 
+    show ren at truecenter
+    show unpure 
     with Pause(0.1)
   
     play sound "intro_jingle.wav"
@@ -36,9 +38,9 @@ label start:
     # directory.
 
     # These display lines of dialogue.
-    show kana at Transform(zoom=0.3)
+    show k f_c at left_char
     a "im gonan go swim"
-    show k_s_o_m at Transform(zoom=0.3)
+    show k s_o_m at left_char with Dissolve(0.08)
     play audio gig1
     a "hehehehe"
     
