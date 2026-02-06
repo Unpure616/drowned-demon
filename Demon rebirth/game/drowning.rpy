@@ -1,4 +1,6 @@
 label drowning1:
+    $ _skipping = False
+    $ _dismiss_pause = False
     stop audio
     stop music
     stop sound
@@ -14,3 +16,5 @@ label drowning1:
 
     scene black with dissolve
     with Pause(5)
+    $ _skipping = True
+    $ _dismiss_pause = True
