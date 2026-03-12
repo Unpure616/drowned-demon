@@ -2,8 +2,9 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+init:
+    $ a = Character("Avery", color="#964600")
 
-define a = Character("Avery")
 
 label splashscreen:
     $ _skipping = False
@@ -24,37 +25,20 @@ label splashscreen:
     jump credit
 
 label credit:
-    
+    play sound "credit_theme.wav"
     scene black 
-    # show logo at truecenter 
+    # show logo at truecenter     play sound "credit_theme.wav"
     show credit at truecenter,Transform(zoom=2)
     show assets at top
     show credit1 at center, default
     
     with Pause(0.1)
-  
-    play sound "credit_theme.wav"
-
-
     with Pause(5)
 
     scene black with dissolve
     with Pause(1)
     jump warning
 
-label warning:
-    
-    scene black 
-    # show logo at truecenter 
-    stop music
-    $ renpy.alt("Warning this project contains themes and subjects of violence, suffocation and inner demons. imagery shown may not be fitted for the faint of heart. player discretion is adviced", force=True)
-    centered "Warning this project contains themes and subjects of violence, suffocation and inner demons. imagery shown may not be fitted for the faint of heart. player discretion is adviced"
-
-    scene black with dissolve
-    with Pause(1)
-    $ _skipping = True
-    $ _dismiss_pause = True
-    return
 
 
 # The game starts here.

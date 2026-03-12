@@ -40,7 +40,21 @@ label begin:
     a "well its depressing for sure"
     show k f_o
     "she pulls the earphones out of your ears"
+    show pods at truecenter
     y "hey give them back!"
     show k f_c_m 
     "no!"
+    # throws pods
+    show k f_c
+    transform slide_right:
+        truecenter
+        xalign 0.0
+        linear 1.0 xalign 1.0
+
+
+    show pods at slide_right
+    pause (1)
+    hide pods
+
+    y "what the hell"
     jump drowning1

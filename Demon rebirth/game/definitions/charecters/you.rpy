@@ -1,1 +1,2 @@
-define y = Character("You")
+init:
+    $ y = Character("Mc", color="#e91000")
