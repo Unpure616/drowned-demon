@@ -7,16 +7,18 @@ init:
 
 
 label splashscreen:
+
     $ _skipping = False
     $ _dismiss_pause = False
     scene black 
-    # show logo at truecenter 
-    show ren at truecenter
-    show unpure 
-    with Pause(0.1)
-  
-    play sound "intro_jingle.wav"
-
+    if not persistent.drown:
+        # show logo at truecenter 
+        show ren at truecenter
+        show unpure 
+        with Pause(0.1)
+    
+        play sound "intro_jingle.wav"
+    
 
     with Pause(5)
 
@@ -25,20 +27,25 @@ label splashscreen:
     jump credit
 
 label credit:
-    play sound "credit_theme.wav"
-    scene black 
-    # show logo at truecenter     play sound "credit_theme.wav"
-    show credit at truecenter,Transform(zoom=2)
-    show assets at top
-    show credit1 at center, default
-    
-    with Pause(0.1)
-    with Pause(5)
+    scene black
+    if persistent.drown:
+        call ahdistava_juttu
+    else:
+        play sound "credit_theme.wav"
+        
+        
+        # show logo at truecenter     play sound "credit_theme.wav"
+        show credit at truecenter,Transform(zoom=2)
+        show assets at top
+        show credit1 at center, default
+        
+        with Pause(0.1)
+        with Pause(5)
+         
 
-    scene black with dissolve
+        scene black with dissolve
     with Pause(1)
     jump warning
-
 
 
 # The game starts here.

@@ -97,7 +97,7 @@ image bye:
     
     repeat
 
-define gui.main_menu_background = ConditionSwitch("persistent.drown","bye","not persistent.drown","gui/main_menu.png")
+# define gui.main_menu_background = ConditionSwitch("persistent.drown","bye","not persistent.drown","gui/main_menu.png")
 define gui.game_menu_background = "gui/game_menu.png"
 
 

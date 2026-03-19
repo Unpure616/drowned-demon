@@ -75,10 +75,45 @@ label wiki:
     
     stop music fadeout(0.5)
     scene red with Dissolve(5)
+    $ _skipping = False
+    $ _dismiss_pause = False
     $renpy.open_url("https://en.wikipedia.org/wiki/Drowning")
+    $renpy.open_url("https://upload.wikimedia.org/wikipedia/commons/a/a1/La_Jeune_Martyre_-_Paul_Delaroche_-_Muse_du_Louvre_Peintures_RF_1038.jpg")
     $renpy.play("note.ogg",channel = "audio")
     $ persistent.drown = True
     play music theme2
-    pause 3.3
+    pause 3.4
     $ renpy.quit(relaunch = True)
+    $ _skipping = True
+    $ _dismiss_pause = True
     return
+
+label main_menu:
+    if persistent.drown:
+        scene bye 
+        play music theme2
+
+    else:
+        scene lakeside_fog
+        play music theme 
+    $ persistent.drown = False
+    call screen main_menu
+
+label ahdistava_juttu:
+        scene lakeside_night
+        show histo at left_char 
+        play sound "audio.ogg" loop
+        pause(1)
+        show histo as histor at right_char
+        pause(12)
+        stop sound 
+        return 
+image histo:
+    animation
+    "kana/kan_spook.png"
+    alpha 1
+    pause(1)
+    linear 0 alpha 0
+    pause(1)
+    repeat
+

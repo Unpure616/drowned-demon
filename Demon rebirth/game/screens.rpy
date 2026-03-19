@@ -299,7 +299,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action [SetField(persistent,"drown",False),Start()]
+            textbutton _("Start") action Start()
 
         else:
 
@@ -330,7 +330,7 @@ screen navigation():
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action [SetField(persistent,"drown",False),Quit(confirm=not main_menu)]
+            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -355,7 +355,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+
     add store.konami_listener 
     # This empty frame darkens the main menu.
     frame:
@@ -420,7 +420,8 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        # add gui.main_menu_background
+        pass
     else:
         add gui.game_menu_background
 
